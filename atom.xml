@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cf65happy.github.io/"/>
-  <updated>2019-04-04T08:14:47.059Z</updated>
+  <updated>2019-04-04T09:13:12.586Z</updated>
   <id>https://cf65happy.github.io/</id>
   
   <author>
@@ -17,16 +17,28 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
+    <title>项目管理过程组与知识领域</title>
     <link href="https://cf65happy.github.io/2019/04/04/Hello-World/"/>
     <id>https://cf65happy.github.io/2019/04/04/Hello-World/</id>
-    <published>2019-04-04T08:14:47.000Z</published>
-    <updated>2019-04-04T08:14:47.059Z</updated>
+    <published>2019-04-04T08:14:00.000Z</published>
+    <updated>2019-04-04T09:13:12.586Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="项目管理五大过程组"><a href="#项目管理五大过程组" class="headerlink" title="项目管理五大过程组"></a>项目管理五大过程组</h6><ul><li>启动过程组</li><li>规划过程组</li><li>执行过程组</li><li>监控过程组</li><li>收尾过程组</li></ul><h6 id="知识领域"><a href="#知识领域" class="headerlink" title="知识领域"></a>知识领域</h6><ul><li>项目整合管理<ul><li>制定项目章程</li><li>制定项目管理计划</li><li>指导与管理项目工作</li><li>管理项目知识</li><li>监控项目工作</li><li>实施整体变更控制</li><li>结束项目或阶段</li></ul></li><li>项目范围管理<ul><li>规划范围管理</li><li>收集需求</li><li>定义范围</li><li>创建WBS</li><li>确认范围</li><li>控制范围</li></ul></li><li>项目进度管理<ul><li>规划进度管理</li><li>定义活动</li><li>排列活动顺序</li><li>估算活动持续时间</li><li>制定进度计划</li><li>控制进度</li></ul></li><li>项目成本管理<ul><li>规划成本管理</li><li>估算成本</li><li>制定预算</li><li>控制成本</li></ul></li><li>项目质量管理<ul><li>规划质量管理</li><li>管理质量</li><li>控制质量</li></ul></li><li>项目资源管理<ul><li>规划资源管理</li><li>估算活动资源</li><li>获取资源</li><li>建设团队</li><li>管理团队</li><li>控制资源</li></ul></li><li>项目沟通管理<ul><li>规划沟通管理</li><li>管理沟通</li><li>监控沟通</li></ul></li><li>项目风险管理<ul><li>规划风险管理</li><li>识别风险</li><li>实施定性风险分析</li><li>实时定量风险分析</li><li>规划风险应对</li><li>实施风险应对</li><li>监督风险</li></ul></li><li>项目采购管理<ul><li>规划采购管理</li><li>实施采购</li><li>控制采购</li></ul></li><li>项目相关方管理<ul><li>识别相关方</li><li>规划相关方参与</li><li>管理相关方参与</li><li>监督相关方参与</li></ul></li></ul><hr><p>知识领域在项目管理五大过程组中的体现如表：</p><table><thead><tr><th style="text-align:center">知识领域</th><th style="text-align:center">启动</th><th style="text-align:center">规划</th><th style="text-align:center">执行</th><th style="text-align:center">监控</th><th style="text-align:center">收尾</th></tr></thead><tbody><tr><td style="text-align:center"><strong>项目整合管理</strong></td><td style="text-align:center">制定项目章程</td><td style="text-align:center">制定项目管理计划</td><td style="text-align:center">指导与管理项目工作<br><br>管理项目知识</td><td style="text-align:center">监控项目工作<br><br>实施整体变更控制</td><td style="text-align:center">结束项目或阶段</td></tr><tr><td style="text-align:center"><strong>项目范围管理</strong></td><td style="text-align:center"></td><td style="text-align:center">规划范围管理<br><br>收集需求<br><br>定义范围<br><br>创建WBS</td><td style="text-align:center"></td><td style="text-align:center">确认范围<br><br>控制范围</td><td style="text-align:center"></td></tr><tr><td style="text-align:center"><strong>项目进度管理</strong></td><td style="text-align:center"></td><td style="text-align:center">规划进度管理<br><br>定义活动<br><br>排列活动顺序<br><br>估算活动持续时间<br><br>制定进度计划</td><td style="text-align:center"></td><td style="text-align:center">控制进度</td><td style="text-align:center"></td></tr><tr><td style="text-align:center"><strong>项目成本管理</strong></td><td style="text-align:center"></td><td style="text-align:center">规划成本管理<br><br>估算成本<br><br>制定预算</td><td style="text-align:center"></td><td style="text-align:center">控制成本</td><td style="text-align:center"></td></tr><tr><td style="text-align:center"><strong>项目质量管理</strong></td><td style="text-align:center"></td><td style="text-align:center">规划质量管理</td><td style="text-align:center">管理质量</td><td style="text-align:center">控制质量</td><td style="text-align:center"></td></tr><tr><td style="text-align:center"><strong>项目资源管理</strong></td><td style="text-align:center"></td><td style="text-align:center">规划资源管理<br><br>估算活动资源</td><td style="text-align:center">获取资源<br><br>建设团队<br><br>管理团队</td><td style="text-align:center">控制资源</td><td style="text-align:center"></td></tr><tr><td style="text-align:center"><strong>项目沟通管理</strong></td><td style="text-align:center"></td><td style="text-align:center">规划沟通管理</td><td style="text-align:center">管理沟通</td><td style="text-align:center">监督沟通</td><td style="text-align:center"></td></tr><tr><td style="text-align:center"><strong>项目风险管理</strong></td><td style="text-align:center"></td><td style="text-align:center">规划风险管理<br><br>识别风险<br><br>实施定性风险分析<br><br>实时定量分析风险<br><br>规划风险应对</td><td style="text-align:center">实施风险应对</td><td style="text-align:center">监督风险</td><td style="text-align:center"></td></tr><tr><td style="text-align:center"><strong>项目采购管理</strong></td><td style="text-align:center"></td><td style="text-align:center">规划采购管理</td><td style="text-align:center">实施采购</td><td style="text-align:center">控制采购</td><td style="text-align:center"></td></tr><tr><td style="text-align:center"><strong>项目相关方管理</strong></td><td style="text-align:center">识别相关方</td><td style="text-align:center">规划相关方参与</td><td style="text-align:center">管理相关方参与</td><td style="text-align:center">监督相关方参与</td><td style="text-align:center"></td></tr></tbody></table>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h6 id=&quot;项目管理五大过程组&quot;&gt;&lt;a href=&quot;#项目管理五大过程组&quot; class=&quot;headerlink&quot; title=&quot;项目管理五大过程组&quot;&gt;&lt;/a&gt;项目管理五大过程组&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;启动过程组&lt;/li&gt;
+&lt;li&gt;规划过程组&lt;/li&gt;
+&lt;li&gt;执行过程组&lt;
+      
+    
     </summary>
     
+    
+      <category term="PMP" scheme="https://cf65happy.github.io/tags/PMP/"/>
     
   </entry>
   
