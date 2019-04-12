@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="ITTO，输入(input)、工具(tool)、技术(technology)、输出(out)。个人理解是，输入就是完成某项任务需要的前提条件，工具和技术就是为了实现功能需调用的方法，输出就是最终实现的结果。下面按照项目管理的五大过程组依次描述不同过程组中需要的知识领域的ITTO。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ITTO图">
+<meta property="og:url" content="https://cf65happy.github.io/2019/04/10/ITTO图/index.html">
+<meta property="og:site_name" content="浮生若梦">
+<meta property="og:description" content="ITTO，输入(input)、工具(tool)、技术(technology)、输出(out)。个人理解是，输入就是完成某项任务需要的前提条件，工具和技术就是为了实现功能需调用的方法，输出就是最终实现的结果。下面按照项目管理的五大过程组依次描述不同过程组中需要的知识领域的ITTO。">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/制定项目章程.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/识别相关方.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/制定项目管理计划.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/规划范围管理.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/收集需求.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/定义范围.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/创建WBS.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/规划进度管理.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/定义活动.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/排列活动顺序.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/估算活动持续时间.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/制定进度计划.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/规划成本管理.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/估算成本.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/制定预算.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/规划质量管理.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/规划资源管理.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/估算活动资源.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/规划沟通管理.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/规划风险管理.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/识别风险.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/实施定性风险分析.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/实施定量风险分析.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/规划风险应对.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/规划采购管理.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/规划相关方参与.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/指导与管理项目工作.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/管理项目知识.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/管理质量.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/获取资源.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/建设团队.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/管理团队.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/管理沟通.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/实施风险应对.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/实施采购.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/管理相关方参与.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/监控项目工作.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/实施整体变更控制.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/确认范围.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/控制范围.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/控制进度.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/控制成本.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/控制质量.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/控制资源.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/监督沟通.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/监督风险.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/控制采购.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/监督相关方参与.png">
+<meta property="og:image" content="https://cf65happy.github.io/images/ITTO/结束项目或阶段.png">
+<meta property="og:updated_time" content="2019-04-12T02:13:33.355Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ITTO图">
+<meta name="twitter:description" content="ITTO，输入(input)、工具(tool)、技术(technology)、输出(out)。个人理解是，输入就是完成某项任务需要的前提条件，工具和技术就是为了实现功能需调用的方法，输出就是最终实现的结果。下面按照项目管理的五大过程组依次描述不同过程组中需要的知识领域的ITTO。">
+<meta name="twitter:image" content="https://cf65happy.github.io/images/ITTO/制定项目章程.png">
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="浮生若梦" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://cf65happy.github.io/2019/04/10/ITTO图/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>ITTO图 | 浮生若梦</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">浮生若梦</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+
+    
+
+    <a href="/" rel="section">Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+
+    
+
+    <a href="/archives/" rel="section">Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://cf65happy.github.io/2019/04/10/ITTO图/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fly">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浮生若梦">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ITTO图
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-10 10:42:08" itemprop="dateCreated datePublished" datetime="2019-04-10T10:42:08+08:00">2019-04-10</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-12 10:13:33" itemprop="dateModified" datetime="2019-04-12T10:13:33+08:00">2019-04-12</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>ITTO，输入(input)、工具(tool)、技术(technology)、输出(out)。个人理解是，输入就是完成某项任务需要的前提条件，工具和技术就是为了实现功能需调用的方法，输出就是最终实现的结果。下面按照项目管理的五大过程组依次描述不同过程组中需要的知识领域的ITTO。<br><a id="more"></a></p>
+<h2 id="启动过程组"><a href="#启动过程组" class="headerlink" title="启动过程组"></a>启动过程组</h2><h3 id="项目整合管理"><a href="#项目整合管理" class="headerlink" title="项目整合管理"></a>项目整合管理</h3><h4 id="制定项目章程"><a href="#制定项目章程" class="headerlink" title="制定项目章程"></a>制定项目章程</h4><p><img src="/images/ITTO/制定项目章程.png" alt="制定项目章程"></p>
+<h3 id="项目相关方管理"><a href="#项目相关方管理" class="headerlink" title="项目相关方管理"></a>项目相关方管理</h3><h4 id="识别相关方"><a href="#识别相关方" class="headerlink" title="识别相关方"></a>识别相关方</h4><p><img src="/images/ITTO/识别相关方.png" alt="识别相关方"></p>
+<h2 id="规划过程组"><a href="#规划过程组" class="headerlink" title="规划过程组"></a>规划过程组</h2><h3 id="项目整合管理-1"><a href="#项目整合管理-1" class="headerlink" title="项目整合管理"></a>项目整合管理</h3><h4 id="制定项目管理计划"><a href="#制定项目管理计划" class="headerlink" title="制定项目管理计划"></a>制定项目管理计划</h4><p><img src="/images/ITTO/制定项目管理计划.png" alt="制定项目管理计划"></p>
+<h3 id="项目范围管理"><a href="#项目范围管理" class="headerlink" title="项目范围管理"></a>项目范围管理</h3><h4 id="规划范围管理"><a href="#规划范围管理" class="headerlink" title="规划范围管理"></a>规划范围管理</h4><p><img src="/images/ITTO/规划范围管理.png" alt="规划范围管理"></p>
+<h4 id="收集需求"><a href="#收集需求" class="headerlink" title="收集需求"></a>收集需求</h4><p><img src="/images/ITTO/收集需求.png" alt="收集需求"></p>
+<h4 id="定义范围"><a href="#定义范围" class="headerlink" title="定义范围"></a>定义范围</h4><p><img src="/images/ITTO/定义范围.png" alt="定义范围"></p>
+<h4 id="创建WBS"><a href="#创建WBS" class="headerlink" title="创建WBS"></a>创建WBS</h4><p><img src="/images/ITTO/创建WBS.png" alt="创建WBS"></p>
+<h3 id="项目进度管理"><a href="#项目进度管理" class="headerlink" title="项目进度管理"></a>项目进度管理</h3><h4 id="规划进度管理"><a href="#规划进度管理" class="headerlink" title="规划进度管理"></a>规划进度管理</h4><p><img src="/images/ITTO/规划进度管理.png" alt="规划进度管理"></p>
+<h4 id="定义活动"><a href="#定义活动" class="headerlink" title="定义活动"></a>定义活动</h4><p><img src="/images/ITTO/定义活动.png" alt="定义活动"></p>
+<h4 id="排列活动顺序"><a href="#排列活动顺序" class="headerlink" title="排列活动顺序"></a>排列活动顺序</h4><p><img src="/images/ITTO/排列活动顺序.png" alt="排列活动顺序"></p>
+<h4 id="估算活动持续时间"><a href="#估算活动持续时间" class="headerlink" title="估算活动持续时间"></a>估算活动持续时间</h4><p><img src="/images/ITTO/估算活动持续时间.png" alt="估算活动持续时间"></p>
+<h4 id="制定进度计划"><a href="#制定进度计划" class="headerlink" title="制定进度计划"></a>制定进度计划</h4><p><img src="/images/ITTO/制定进度计划.png" alt="制定进度计划"></p>
+<h3 id="项目成本管理"><a href="#项目成本管理" class="headerlink" title="项目成本管理"></a>项目成本管理</h3><h4 id="规划成本管理"><a href="#规划成本管理" class="headerlink" title="规划成本管理"></a>规划成本管理</h4><p><img src="/images/ITTO/规划成本管理.png" alt="规划成本管理"></p>
+<h4 id="估算成本"><a href="#估算成本" class="headerlink" title="估算成本"></a>估算成本</h4><p><img src="/images/ITTO/估算成本.png" alt="估算成本"></p>
+<h4 id="制定预算"><a href="#制定预算" class="headerlink" title="制定预算"></a>制定预算</h4><p><img src="/images/ITTO/制定预算.png" alt="制定预算"></p>
+<h3 id="项目质量管理"><a href="#项目质量管理" class="headerlink" title="项目质量管理"></a>项目质量管理</h3><h4 id="规划质量管理"><a href="#规划质量管理" class="headerlink" title="规划质量管理"></a>规划质量管理</h4><p><img src="/images/ITTO/规划质量管理.png" alt="规划质量管理"></p>
+<h3 id="项目资源管理"><a href="#项目资源管理" class="headerlink" title="项目资源管理"></a>项目资源管理</h3><h4 id="规划资源管理"><a href="#规划资源管理" class="headerlink" title="规划资源管理"></a>规划资源管理</h4><p><img src="/images/ITTO/规划资源管理.png" alt="规划资源管理"></p>
+<h4 id="估算活动资源"><a href="#估算活动资源" class="headerlink" title="估算活动资源"></a>估算活动资源</h4><p><img src="/images/ITTO/估算活动资源.png" alt="估算活动资源"></p>
+<h3 id="项目沟通管理"><a href="#项目沟通管理" class="headerlink" title="项目沟通管理"></a>项目沟通管理</h3><h4 id="规划沟通管理"><a href="#规划沟通管理" class="headerlink" title="规划沟通管理"></a>规划沟通管理</h4><p><img src="/images/ITTO/规划沟通管理.png" alt="规划沟通管理"></p>
+<h3 id="项目风险管理"><a href="#项目风险管理" class="headerlink" title="项目风险管理"></a>项目风险管理</h3><h4 id="规划风险管理"><a href="#规划风险管理" class="headerlink" title="规划风险管理"></a>规划风险管理</h4><p><img src="/images/ITTO/规划风险管理.png" alt="规划风险管理"></p>
+<h4 id="识别风险"><a href="#识别风险" class="headerlink" title="识别风险"></a>识别风险</h4><p><img src="/images/ITTO/识别风险.png" alt="识别风险"></p>
+<h4 id="实施定性风险分析"><a href="#实施定性风险分析" class="headerlink" title="实施定性风险分析"></a>实施定性风险分析</h4><p><img src="/images/ITTO/实施定性风险分析.png" alt="实施定性风险分析"></p>
+<h4 id="实施定量风险分析"><a href="#实施定量风险分析" class="headerlink" title="实施定量风险分析"></a>实施定量风险分析</h4><p><img src="/images/ITTO/实施定量风险分析.png" alt="实施定量风险分析"></p>
+<h4 id="规划风险应对"><a href="#规划风险应对" class="headerlink" title="规划风险应对"></a>规划风险应对</h4><p><img src="/images/ITTO/规划风险应对.png" alt="规划风险应对"></p>
+<h3 id="项目采购管理"><a href="#项目采购管理" class="headerlink" title="项目采购管理"></a>项目采购管理</h3><h4 id="规划采购管理"><a href="#规划采购管理" class="headerlink" title="规划采购管理"></a>规划采购管理</h4><p><img src="/images/ITTO/规划采购管理.png" alt="规划采购管理"></p>
+<h3 id="项目相关方管理-1"><a href="#项目相关方管理-1" class="headerlink" title="项目相关方管理"></a>项目相关方管理</h3><h4 id="规划相关方参与"><a href="#规划相关方参与" class="headerlink" title="规划相关方参与"></a>规划相关方参与</h4><p><img src="/images/ITTO/规划相关方参与.png" alt="规划相关方参与"></p>
+<h2 id="执行过程组"><a href="#执行过程组" class="headerlink" title="执行过程组"></a>执行过程组</h2><h3 id="项目整合管理-2"><a href="#项目整合管理-2" class="headerlink" title="项目整合管理"></a>项目整合管理</h3><h4 id="指导与管理项目工作"><a href="#指导与管理项目工作" class="headerlink" title="指导与管理项目工作"></a>指导与管理项目工作</h4><p><img src="/images/ITTO/指导与管理项目工作.png" alt="指导与管理项目工作"></p>
+<h4 id="管理项目知识"><a href="#管理项目知识" class="headerlink" title="管理项目知识"></a>管理项目知识</h4><p><img src="/images/ITTO/管理项目知识.png" alt="管理项目知识"></p>
+<h3 id="项目质量管理-1"><a href="#项目质量管理-1" class="headerlink" title="项目质量管理"></a>项目质量管理</h3><h4 id="管理质量"><a href="#管理质量" class="headerlink" title="管理质量"></a>管理质量</h4><p><img src="/images/ITTO/管理质量.png" alt="管理质量"></p>
+<h3 id="项目资源管理-1"><a href="#项目资源管理-1" class="headerlink" title="项目资源管理"></a>项目资源管理</h3><h4 id="获取资源"><a href="#获取资源" class="headerlink" title="获取资源"></a>获取资源</h4><p><img src="/images/ITTO/获取资源.png" alt="获取资源"></p>
+<h4 id="建设团队"><a href="#建设团队" class="headerlink" title="建设团队"></a>建设团队</h4><p><img src="/images/ITTO/建设团队.png" alt="建设团队"></p>
+<h4 id="管理团队"><a href="#管理团队" class="headerlink" title="管理团队"></a>管理团队</h4><p><img src="/images/ITTO/管理团队.png" alt="管理团队"></p>
+<h3 id="项目沟通管理-1"><a href="#项目沟通管理-1" class="headerlink" title="项目沟通管理"></a>项目沟通管理</h3><h4 id="管理沟通"><a href="#管理沟通" class="headerlink" title="管理沟通"></a>管理沟通</h4><p><img src="/images/ITTO/管理沟通.png" alt="管理沟通"></p>
+<h3 id="项目风险管理-1"><a href="#项目风险管理-1" class="headerlink" title="项目风险管理"></a>项目风险管理</h3><h4 id="实施风险应对"><a href="#实施风险应对" class="headerlink" title="实施风险应对"></a>实施风险应对</h4><p><img src="/images/ITTO/实施风险应对.png" alt="实施风险应对"></p>
+<h3 id="项目采购管理-1"><a href="#项目采购管理-1" class="headerlink" title="项目采购管理"></a>项目采购管理</h3><h4 id="实施采购"><a href="#实施采购" class="headerlink" title="实施采购"></a>实施采购</h4><p><img src="/images/ITTO/实施采购.png" alt="实施采购"></p>
+<h3 id="项目相关方管理-2"><a href="#项目相关方管理-2" class="headerlink" title="项目相关方管理"></a>项目相关方管理</h3><h4 id="管理相关方参与"><a href="#管理相关方参与" class="headerlink" title="管理相关方参与"></a>管理相关方参与</h4><p><img src="/images/ITTO/管理相关方参与.png" alt="管理相关方参与"></p>
+<h2 id="监控过程组"><a href="#监控过程组" class="headerlink" title="监控过程组"></a>监控过程组</h2><h3 id="项目整合管理-3"><a href="#项目整合管理-3" class="headerlink" title="项目整合管理"></a>项目整合管理</h3><h4 id="监控项目工作"><a href="#监控项目工作" class="headerlink" title="监控项目工作"></a>监控项目工作</h4><p><img src="/images/ITTO/监控项目工作.png" alt="监控项目工作"></p>
+<h4 id="实施整体变更控制"><a href="#实施整体变更控制" class="headerlink" title="实施整体变更控制"></a>实施整体变更控制</h4><p><img src="/images/ITTO/实施整体变更控制.png" alt="实施整体变更控制"></p>
+<h3 id="项目范围管理-1"><a href="#项目范围管理-1" class="headerlink" title="项目范围管理"></a>项目范围管理</h3><h4 id="确认范围"><a href="#确认范围" class="headerlink" title="确认范围"></a>确认范围</h4><p><img src="/images/ITTO/确认范围.png" alt="确认范围"></p>
+<h4 id="控制范围"><a href="#控制范围" class="headerlink" title="控制范围"></a>控制范围</h4><p><img src="/images/ITTO/控制范围.png" alt="控制范围"></p>
+<h3 id="项目进度管理-1"><a href="#项目进度管理-1" class="headerlink" title="项目进度管理"></a>项目进度管理</h3><h4 id="控制进度"><a href="#控制进度" class="headerlink" title="控制进度"></a>控制进度</h4><p><img src="/images/ITTO/控制进度.png" alt="控制进度"></p>
+<h3 id="项目成本管理-1"><a href="#项目成本管理-1" class="headerlink" title="项目成本管理"></a>项目成本管理</h3><h4 id="控制成本"><a href="#控制成本" class="headerlink" title="控制成本"></a>控制成本</h4><p><img src="/images/ITTO/控制成本.png" alt="控制成本"></p>
+<h3 id="项目质量管理-2"><a href="#项目质量管理-2" class="headerlink" title="项目质量管理"></a>项目质量管理</h3><h4 id="控制质量"><a href="#控制质量" class="headerlink" title="控制质量"></a>控制质量</h4><p><img src="/images/ITTO/控制质量.png" alt="控制质量"></p>
+<h3 id="项目资源管理-2"><a href="#项目资源管理-2" class="headerlink" title="项目资源管理"></a>项目资源管理</h3><h4 id="控制资源"><a href="#控制资源" class="headerlink" title="控制资源"></a>控制资源</h4><p><img src="/images/ITTO/控制资源.png" alt="控制资源"></p>
+<h3 id="项目沟通管理-2"><a href="#项目沟通管理-2" class="headerlink" title="项目沟通管理"></a>项目沟通管理</h3><h4 id="监督沟通"><a href="#监督沟通" class="headerlink" title="监督沟通"></a>监督沟通</h4><p><img src="/images/ITTO/监督沟通.png" alt="监督沟通"></p>
+<h3 id="项目风险管理-2"><a href="#项目风险管理-2" class="headerlink" title="项目风险管理"></a>项目风险管理</h3><h4 id="监督风险"><a href="#监督风险" class="headerlink" title="监督风险"></a>监督风险</h4><p><img src="/images/ITTO/监督风险.png" alt="监督风险"></p>
+<h3 id="项目采购管理-2"><a href="#项目采购管理-2" class="headerlink" title="项目采购管理"></a>项目采购管理</h3><h4 id="控制采购"><a href="#控制采购" class="headerlink" title="控制采购"></a>控制采购</h4><p><img src="/images/ITTO/控制采购.png" alt="控制采购"></p>
+<h3 id="项目相关方管理-3"><a href="#项目相关方管理-3" class="headerlink" title="项目相关方管理"></a>项目相关方管理</h3><h4 id="监督相关方参与"><a href="#监督相关方参与" class="headerlink" title="监督相关方参与"></a>监督相关方参与</h4><p><img src="/images/ITTO/监督相关方参与.png" alt="监督相关方参与"></p>
+<h2 id="收尾过程组"><a href="#收尾过程组" class="headerlink" title="收尾过程组"></a>收尾过程组</h2><h3 id="项目整合管理-4"><a href="#项目整合管理-4" class="headerlink" title="项目整合管理"></a>项目整合管理</h3><h4 id="结束项目或阶段"><a href="#结束项目或阶段" class="headerlink" title="结束项目或阶段"></a>结束项目或阶段</h4><p><img src="/images/ITTO/结束项目或阶段.png" alt="结束项目或阶段"></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/09/项目管理过程组与知识领域/" rel="next" title="项目管理过程组与知识领域">
+                <i class="fa fa-chevron-left"></i> 项目管理过程组与知识领域
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Fly</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/cf65happy" title="GitHub &rarr; https://github.com/cf65happy" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#启动过程组"><span class="nav-number">1.</span> <span class="nav-text">启动过程组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目整合管理"><span class="nav-number">1.1.</span> <span class="nav-text">项目整合管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#制定项目章程"><span class="nav-number">1.1.1.</span> <span class="nav-text">制定项目章程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目相关方管理"><span class="nav-number">1.2.</span> <span class="nav-text">项目相关方管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#识别相关方"><span class="nav-number">1.2.1.</span> <span class="nav-text">识别相关方</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#规划过程组"><span class="nav-number">2.</span> <span class="nav-text">规划过程组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目整合管理-1"><span class="nav-number">2.1.</span> <span class="nav-text">项目整合管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#制定项目管理计划"><span class="nav-number">2.1.1.</span> <span class="nav-text">制定项目管理计划</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目范围管理"><span class="nav-number">2.2.</span> <span class="nav-text">项目范围管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#规划范围管理"><span class="nav-number">2.2.1.</span> <span class="nav-text">规划范围管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#收集需求"><span class="nav-number">2.2.2.</span> <span class="nav-text">收集需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义范围"><span class="nav-number">2.2.3.</span> <span class="nav-text">定义范围</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建WBS"><span class="nav-number">2.2.4.</span> <span class="nav-text">创建WBS</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目进度管理"><span class="nav-number">2.3.</span> <span class="nav-text">项目进度管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#规划进度管理"><span class="nav-number">2.3.1.</span> <span class="nav-text">规划进度管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义活动"><span class="nav-number">2.3.2.</span> <span class="nav-text">定义活动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排列活动顺序"><span class="nav-number">2.3.3.</span> <span class="nav-text">排列活动顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#估算活动持续时间"><span class="nav-number">2.3.4.</span> <span class="nav-text">估算活动持续时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#制定进度计划"><span class="nav-number">2.3.5.</span> <span class="nav-text">制定进度计划</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目成本管理"><span class="nav-number">2.4.</span> <span class="nav-text">项目成本管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#规划成本管理"><span class="nav-number">2.4.1.</span> <span class="nav-text">规划成本管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#估算成本"><span class="nav-number">2.4.2.</span> <span class="nav-text">估算成本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#制定预算"><span class="nav-number">2.4.3.</span> <span class="nav-text">制定预算</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目质量管理"><span class="nav-number">2.5.</span> <span class="nav-text">项目质量管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#规划质量管理"><span class="nav-number">2.5.1.</span> <span class="nav-text">规划质量管理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目资源管理"><span class="nav-number">2.6.</span> <span class="nav-text">项目资源管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#规划资源管理"><span class="nav-number">2.6.1.</span> <span class="nav-text">规划资源管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#估算活动资源"><span class="nav-number">2.6.2.</span> <span class="nav-text">估算活动资源</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目沟通管理"><span class="nav-number">2.7.</span> <span class="nav-text">项目沟通管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#规划沟通管理"><span class="nav-number">2.7.1.</span> <span class="nav-text">规划沟通管理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目风险管理"><span class="nav-number">2.8.</span> <span class="nav-text">项目风险管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#规划风险管理"><span class="nav-number">2.8.1.</span> <span class="nav-text">规划风险管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#识别风险"><span class="nav-number">2.8.2.</span> <span class="nav-text">识别风险</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实施定性风险分析"><span class="nav-number">2.8.3.</span> <span class="nav-text">实施定性风险分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实施定量风险分析"><span class="nav-number">2.8.4.</span> <span class="nav-text">实施定量风险分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#规划风险应对"><span class="nav-number">2.8.5.</span> <span class="nav-text">规划风险应对</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目采购管理"><span class="nav-number">2.9.</span> <span class="nav-text">项目采购管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#规划采购管理"><span class="nav-number">2.9.1.</span> <span class="nav-text">规划采购管理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目相关方管理-1"><span class="nav-number">2.10.</span> <span class="nav-text">项目相关方管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#规划相关方参与"><span class="nav-number">2.10.1.</span> <span class="nav-text">规划相关方参与</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#执行过程组"><span class="nav-number">3.</span> <span class="nav-text">执行过程组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目整合管理-2"><span class="nav-number">3.1.</span> <span class="nav-text">项目整合管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#指导与管理项目工作"><span class="nav-number">3.1.1.</span> <span class="nav-text">指导与管理项目工作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#管理项目知识"><span class="nav-number">3.1.2.</span> <span class="nav-text">管理项目知识</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目质量管理-1"><span class="nav-number">3.2.</span> <span class="nav-text">项目质量管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#管理质量"><span class="nav-number">3.2.1.</span> <span class="nav-text">管理质量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目资源管理-1"><span class="nav-number">3.3.</span> <span class="nav-text">项目资源管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取资源"><span class="nav-number">3.3.1.</span> <span class="nav-text">获取资源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建设团队"><span class="nav-number">3.3.2.</span> <span class="nav-text">建设团队</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#管理团队"><span class="nav-number">3.3.3.</span> <span class="nav-text">管理团队</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目沟通管理-1"><span class="nav-number">3.4.</span> <span class="nav-text">项目沟通管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#管理沟通"><span class="nav-number">3.4.1.</span> <span class="nav-text">管理沟通</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目风险管理-1"><span class="nav-number">3.5.</span> <span class="nav-text">项目风险管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实施风险应对"><span class="nav-number">3.5.1.</span> <span class="nav-text">实施风险应对</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目采购管理-1"><span class="nav-number">3.6.</span> <span class="nav-text">项目采购管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实施采购"><span class="nav-number">3.6.1.</span> <span class="nav-text">实施采购</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目相关方管理-2"><span class="nav-number">3.7.</span> <span class="nav-text">项目相关方管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#管理相关方参与"><span class="nav-number">3.7.1.</span> <span class="nav-text">管理相关方参与</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监控过程组"><span class="nav-number">4.</span> <span class="nav-text">监控过程组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目整合管理-3"><span class="nav-number">4.1.</span> <span class="nav-text">项目整合管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#监控项目工作"><span class="nav-number">4.1.1.</span> <span class="nav-text">监控项目工作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实施整体变更控制"><span class="nav-number">4.1.2.</span> <span class="nav-text">实施整体变更控制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目范围管理-1"><span class="nav-number">4.2.</span> <span class="nav-text">项目范围管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#确认范围"><span class="nav-number">4.2.1.</span> <span class="nav-text">确认范围</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#控制范围"><span class="nav-number">4.2.2.</span> <span class="nav-text">控制范围</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目进度管理-1"><span class="nav-number">4.3.</span> <span class="nav-text">项目进度管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#控制进度"><span class="nav-number">4.3.1.</span> <span class="nav-text">控制进度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目成本管理-1"><span class="nav-number">4.4.</span> <span class="nav-text">项目成本管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#控制成本"><span class="nav-number">4.4.1.</span> <span class="nav-text">控制成本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目质量管理-2"><span class="nav-number">4.5.</span> <span class="nav-text">项目质量管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#控制质量"><span class="nav-number">4.5.1.</span> <span class="nav-text">控制质量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目资源管理-2"><span class="nav-number">4.6.</span> <span class="nav-text">项目资源管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#控制资源"><span class="nav-number">4.6.1.</span> <span class="nav-text">控制资源</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目沟通管理-2"><span class="nav-number">4.7.</span> <span class="nav-text">项目沟通管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#监督沟通"><span class="nav-number">4.7.1.</span> <span class="nav-text">监督沟通</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目风险管理-2"><span class="nav-number">4.8.</span> <span class="nav-text">项目风险管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#监督风险"><span class="nav-number">4.8.1.</span> <span class="nav-text">监督风险</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目采购管理-2"><span class="nav-number">4.9.</span> <span class="nav-text">项目采购管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#控制采购"><span class="nav-number">4.9.1.</span> <span class="nav-text">控制采购</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目相关方管理-3"><span class="nav-number">4.10.</span> <span class="nav-text">项目相关方管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#监督相关方参与"><span class="nav-number">4.10.1.</span> <span class="nav-text">监督相关方参与</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收尾过程组"><span class="nav-number">5.</span> <span class="nav-text">收尾过程组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目整合管理-4"><span class="nav-number">5.1.</span> <span class="nav-text">项目整合管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#结束项目或阶段"><span class="nav-number">5.1.1.</span> <span class="nav-text">结束项目或阶段</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Fly</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
