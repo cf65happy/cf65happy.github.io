@@ -276,6 +276,162 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://cf65happy.github.io/2019/06/27/fastline打包上传至蒲公英/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fly">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浮生若梦">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/27/fastline打包上传至蒲公英/" class="post-title-link" itemprop="url">fastline打包上传至蒲公英</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-06-27 09:46:00 / Modified: 09:48:01" itemprop="dateCreated datePublished" datetime="2019-06-27T09:46:00+08:00">2019-06-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="fastline-打包上传至蒲公英"><a href="#fastline-打包上传至蒲公英" class="headerlink" title="fastline 打包上传至蒲公英"></a>fastline 打包上传至蒲公英</h1><h2 id="安装fastline"><a href="#安装fastline" class="headerlink" title="安装fastline"></a>安装fastline</h2><h3 id="第一步：安装Xcode命令行工具"><a href="#第一步：安装Xcode命令行工具" class="headerlink" title="第一步：安装Xcode命令行工具"></a>第一步：安装Xcode命令行工具</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
+<h3 id="第二步：安装fastlane"><a href="#第二步：安装fastlane" class="headerlink" title="第二步：安装fastlane"></a>第二步：安装fastlane</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/** 使用gem安装 */</span><br><span class="line">sudo gem install fastlane -NV</span><br><span class="line">/** 使用homebrew安装 */</span><br><span class="line">brew cask install fastlane</span><br></pre></td></tr></table></figure>
+<h3 id="第三步：初始化fastlane"><a href="#第三步：初始化fastlane" class="headerlink" title="第三步：初始化fastlane"></a>第三步：初始化fastlane</h3><p><font color="red">⚠️ 进入工程主目录操作<br></font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastlane init</span><br></pre></td></tr></table></figure></p>
+<p>出现<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">What would you like to use fastlane for?</span><br></pre></td></tr></table></figure></p>
+<p>选项时，视情况选择2、3或4，不同的是选择2或3会让输入苹果开发者账号或密码，继续操作如果在testFlight和App Store中没有此APP信息，会询问是否添加APP信息，此时可以视情况选择y或n，并且在完成后的Appfile文件中自动填充了账号信息；选择4则需要手动配置Appfile中的账号。<br>创建成功之后会在fastlane文件夹中有两个配置文件<code>Appfile</code>和<code>Fastfile</code><br>在Appfile文件中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># app_identifier(&quot;[[APP_IDENTIFIER]]&quot;) # The bundle identifier of your app</span><br><span class="line"># apple_id(&quot;[[APPLE_ID]]&quot;) # Your Apple email address</span><br><span class="line"></span><br><span class="line"># For more information about the Appfile, see:</span><br><span class="line"># https://docs.fastlane.tools/advanced/#appfile</span><br></pre></td></tr></table></figure></p>
+<p>替换对应的 bundle identifier 和 开发者账号。<br>在Fastfile文件是打包相关的配置信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># This file contains the fastlane.tools configuration</span><br><span class="line"># You can find the documentation at https://docs.fastlane.tools</span><br><span class="line">#</span><br><span class="line"># For a list of all available actions, check out</span><br><span class="line">#</span><br><span class="line">#     https://docs.fastlane.tools/actions</span><br><span class="line">#</span><br><span class="line"># For a list of all available plugins, check out</span><br><span class="line">#</span><br><span class="line">#     https://docs.fastlane.tools/plugins/available-plugins</span><br><span class="line">#</span><br><span class="line"></span><br><span class="line"># Uncomment the line if you want fastlane to automatically update itself</span><br><span class="line"># update_fastlane</span><br><span class="line"></span><br><span class="line">default_platform(:ios)</span><br><span class="line"></span><br><span class="line">platform :ios do</span><br><span class="line">  desc &quot;上传到蒲公英&quot;</span><br><span class="line">  lane :upload_pgyer do</span><br><span class="line">    build_app(</span><br><span class="line">	   export_method: &quot;ad-hoc&quot;, </span><br><span class="line">	   output_directory: &quot;ipa包在本地存放路径&quot;,</span><br><span class="line">   )</span><br><span class="line">   pgyer(api_key: &quot;应用在蒲公英中的ApiKey&quot;, user_key: &quot;应用在蒲公英中的UserKey&quot;)</span><br><span class="line">  end</span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
+<p>注意：</p>
+<ol>
+<li>以上的 api_key 和 user_key，请开发者在自己账号下的 应用管理 - App概述 - API 中可以找到，并替换到以上相应的位置。</li>
+<li>在 Xcode 8.3 和 Xcode 8.3 以后的版本中，对于build_app 的 export_method 的值，需要根据开发者的打包类型进行设置，可选的值有：<code>app-store</code>、<code>ad-hoc</code>、<code>development</code>、<code>enterprise</code>。对于 Xcode 8.3 以下的版本，则不需要设置 export_method。</li>
+</ol>
+<h3 id="第四步：安装蒲公英插件"><a href="#第四步：安装蒲公英插件" class="headerlink" title="第四步：安装蒲公英插件"></a>第四步：安装蒲公英插件</h3><p><font color="red">⚠️ 进入工程主目录操作<br></font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastlane add_plugin pgyer</span><br></pre></td></tr></table></figure></p>
+<p>安装成功之后，配置好配置信息就可以打包上传至蒲公英了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastlane upload_pgyer</span><br></pre></td></tr></table></figure></p>
+<p>fastlane执行的命令是Fastfile文件中定义的lane名称</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://cf65happy.github.io/2019/04/16/PMP知识点碎片/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -942,7 +1098,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
